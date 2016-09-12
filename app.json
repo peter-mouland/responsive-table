@@ -1,0 +1,12 @@
+{
+  "name": "responsive-table",
+  "scripts": {
+  },
+  "env": {
+    "NODE_ENV": {
+      "required": true
+    }
+  },
+  "addons": [
+  ]
+}
