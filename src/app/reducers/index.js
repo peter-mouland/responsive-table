@@ -6,12 +6,12 @@ import * as actions from '../actions';
 
 const log = debug('pivot:reducers/index'); // eslint-disable-line
 
-function game(state = {}, action) {
+function savings(state = {}, action) {
   switch (action.type) {
-    case actions.FETCH_SAVINGS_DATA:
+    case actions.FETCH_SAVINGS_ACCOUNTS:
       return {
         ...state,
-        data: action.data,
+        accounts: action.data,
         status: action.status
       };
     default:
@@ -20,6 +20,6 @@ function game(state = {}, action) {
 }
 
 export default combineReducers({
-  game,
+  savings,
   routing
 });

@@ -2,7 +2,7 @@ import isoFetch from 'isomorphic-fetch';
 import debug from 'debug';
 
 import { localUrl } from '../utils';
-const log = debug('footy:api/index');
+const log = debug('pivot:api/index');
 
 export function checkStatus(response) {
   if (response.status < 200 || response.status >= 300) {
@@ -29,7 +29,8 @@ const fetchUrl = (url, opts) => {
     .then((res) => res.json())
     .then((json) => json)
     .catch((error) => {
-      log('request failed', error);
+      log(`request failed: ${fullUrl}
+${error}`);
       throw new Error('request failed');
     });
 };

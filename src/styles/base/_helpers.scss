@@ -1,0 +1,19 @@
+@import '../utils/mixins';
+
+.sr-only--tiny-only {
+  @include tiny-only {
+    @include sr-only;
+  }
+}
+
+.sr-only--small-only {
+  @include small-only {
+    @include sr-only;
+  }
+}
+
+.sr-only--medium-only {
+  @include medium-only {
+    @include sr-only;
+  }
+}

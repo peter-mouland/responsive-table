@@ -2,7 +2,7 @@ import express from 'express';
 import debug from 'debug';
 import bodyParser from 'body-parser';
 
-import fetchSavingsData from './fetch-savings-data';
+import fetchSavingsAccounts from './fetch-savings-accounts';
 
 const log = debug('pivot:api/index');
 const apiRouter = new express.Router();
@@ -21,8 +21,8 @@ function errorHandler(err, req, res) {
   res.end();
 }
 
-apiRouter.get('/savings-data/:userId', (req, res) => {
-  fetchSavingsData(req.params.userId)
+apiRouter.get('/savings-accounts', (req, res) => {
+  fetchSavingsAccounts()
     .then((results) => sendStatus(200, res, results))
     .catch((e) => sendStatus(500, res, e));
 });

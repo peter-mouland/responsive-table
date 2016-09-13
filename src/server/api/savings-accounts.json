@@ -1,0 +1,24 @@
+{
+  "lastUpdated": "today",
+  "transactions" : [
+    {
+      "Product": "Fixed Saver",
+      "Interest Rate": "2.20%",
+      "Minimum Deposit": "£500",
+      "Interest Type": "Fixed"
+    },
+    {
+      "Product": "Flex Saver",
+      "Interest Rate": "1.50%",
+      "Minimum Deposit": "£0",
+      "Interest Type": "Tracker"
+    },
+    {
+      "Product": "Offset Saver",
+      "Interest Rate": "1.80%",
+      "Interest Rate_note": "some important information",
+      "Minimum Deposit": "£0",
+      "Interest Type": "Fixed"
+    }
+  ]
+}

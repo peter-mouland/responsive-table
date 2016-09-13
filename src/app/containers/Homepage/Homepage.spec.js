@@ -1,7 +1,7 @@
 import { expect, shallow, React } from '../../../../tests/support/test.helper';
-import Homepage from './Homepage';
+import { WrappedComponent as Homepage } from './Homepage';
 
-const baseProps = {};
+const baseProps = { savingsAccounts: [] };
 
 describe('Settings Container', () => {
   it('should have an id of homepage', () => {

@@ -1,0 +1,36 @@
+@import '../utils/colours';
+@import '../utils/mixins';
+
+body {
+  background: $white;
+  color: $black;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  line-height: 36px;
+
+  @include medium {
+    font-size: 20px;
+    line-height: 36px;
+  }
+}
+
+a {
+  color: $link--color;
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: bold;
+}
+
+h1 {
+  color: $heading--color;
+  background-color: $heading--bg;
+  margin-top: 0;
+  font-size: 36px;
+  line-height: 36px;
+  padding: 8px;
+
+  @include medium {
+    font-size: 24px;
+    line-height: 36px;
+  }
+}

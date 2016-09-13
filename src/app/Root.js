@@ -1,11 +1,11 @@
 import React from 'react';
-import { Provider} from 'react-redux';
+import { Provider } from 'react-redux';
 import { Router, browserHistory, createMemoryHistory } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
 
 import { makeRoutes } from './routes';
 import configureStore from './store/configureStore';
-import {isBrowser} from './utils';
+import { isBrowser } from './utils';
 import debug from 'debug';
 
 debug('pivot:Root');

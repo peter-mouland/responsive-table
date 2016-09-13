@@ -1,4 +1,16 @@
-@import "./mixins";
+@import './mixins';
+
+.tiny-only {
+  @include small {
+    display: none !important;
+  }
+}
+
+.small {
+  @include tiny-only {
+    display: none !important;
+  }
+}
 
 .small-only {
   @include medium {
@@ -34,5 +46,15 @@
   }
   @include medium-only {
     display: none !important;
+  }
+}
+
+.hidden {
+  display: none !important;
+}
+
+.hidden--medium {
+  @include medium {
+    display: none;
   }
 }

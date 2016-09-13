@@ -1,5 +1,62 @@
 @import '../../../styles/utils/colours';
+@import '../../../styles/utils/mixins';
 
-.table {
-
+.l-table,
+.l-table__head,
+.l-table__body,
+.l-table__row,
+.l-table__cell {
+  display: block;
 }
+
+.l-table {
+  border: 0;
+  width: 100%;
+  border-collapse: collapse;
+
+  &__row:not(.l-table__row--header) {
+    border: solid $black;
+    border-width: 1px 1px 0;
+    margin: 8px 0;
+  }
+
+  &__cell {
+    @include alternate-color($white, $table-alt-row--bg);
+    border: 0;
+    border-bottom: 1px solid $black;
+    position: relative;
+    text-align: center;
+
+    &:first-child {
+      background-color: $table-heading--bg;
+      padding-left: inherit;
+      text-align: center;
+      font-weight: bold;
+    }
+  }
+}
+
+@include medium {
+  .l-table       { display: table; }
+  .l-table__head { display: table-header-group; }
+  .l-table__body { display: table-row-group; }
+  .l-table__row  { display: table-row; }
+  .l-table__cell { display: table-cell; }
+
+  .l-table {
+    border: 1px solid $black;
+  }
+
+  .l-table__row {
+    @include alternate-color($table-alt-row--bg, $white);
+  }
+
+  .l-table__cell {
+    padding: 4px 8px;
+
+    &--header {
+      background-color: $table-heading--bg;
+    }
+  }
+}
+
