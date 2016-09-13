@@ -18,18 +18,6 @@ $max-medium-width: $large - 1 !default;
   }
 }
 
-@mixin alternate-color($odd, $even) {
-  text-align: left;
-
-  &:nth-child(odd) {
-    background-color: $odd;
-  }
-
-  &:nth-child(even) {
-    background-color: $even;
-  }
-}
-
 @mixin tiny-only {
   @media screen and (max-width: $max-tiny-width) {
     @content;

@@ -14,6 +14,10 @@
   width: 100%;
   border-collapse: collapse;
 
+  &--header{
+    background-color: $table-heading--bg;
+  }
+
   &__row:not(.l-table__row--header) {
     border: solid $black;
     border-width: 1px 1px 0;
@@ -21,7 +25,7 @@
   }
 
   &__cell {
-    @include alternate-color($white, $table-alt-row--bg);
+    background-color: $table-alt-row--bg;
     border: 0;
     border-bottom: 1px solid $black;
     position: relative;
@@ -32,6 +36,9 @@
       padding-left: inherit;
       text-align: center;
       font-weight: bold;
+    }
+    &:nth-child(odd):not(:first-child ) {
+      background-color: inherit;
     }
   }
 }
@@ -48,14 +55,24 @@
   }
 
   .l-table__row {
-    @include alternate-color($table-alt-row--bg, $white);
+    font-weight: normal;
+    &--header {
+      background-color: $table-heading--bg;
+      font-weight: bold;
+    }
+    &:nth-child(odd):not(.l-table__row--header) {
+      background-color: $table-alt-row--bg
+    }
   }
 
   .l-table__cell {
+    background-color: transparent;
     padding: 4px 8px;
+    text-align: left;
 
-    &--header {
-      background-color: $table-heading--bg;
+    &:first-child {
+      font-weight: inherit;
+      background-color: inherit;
     }
   }
 }
