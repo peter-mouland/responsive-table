@@ -22,6 +22,8 @@ export default class Html extends React.Component {
         <meta httpEquiv="x-dns-prefetch-control" content="on" />
         <meta name="viewport" content="width=device-width,initial-scale=1.0" />
         {stylesheets.map((stylesheet, i) => <link href={stylesheet} rel="stylesheet" key={ i } />)}
+        <script dangerouslySetInnerHTML={{ __html: `var dm = document.documentMode;
+          document.documentElement.className += dm ? ' oldie ie' + dm : '';`}} />
       </head>
       <body>
       <script dangerouslySetInnerHTML={{

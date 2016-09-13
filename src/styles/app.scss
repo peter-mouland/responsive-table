@@ -3,3 +3,9 @@
 @import './base/helpers';
 
 @import './utils/breakpoints';
+
+html.oldie {
+  body {
+    min-width: 768px;
+  }
+}
