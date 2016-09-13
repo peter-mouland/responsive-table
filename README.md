@@ -7,6 +7,8 @@ http://responsive-table.herokuapp.com
 This demo will use CSS and html attributes to ensure a data tables are readable
 on small screens.
 
+_[react-lego](https://github.com/peter-mouland/react-lego) was used as the base for this app_
+
 ## Notes:
  
  1. the design seems to be a wire frame so not too much time has been spent on getting each browser to match this design.
